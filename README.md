@@ -53,7 +53,7 @@ If you're having trouble installing packages, check out the helpful docs for ins
 }
 ```
 
-`opts.preWheelPixels` is the long for every step of mouse wheel,default to 20.
+`opts.preWheelPixels` is the length for every step of mouse wheel,default to 20.
 
 ## Contact me
 If you have any question or find any bugs about Lscroll,I will be appreciated for your feedback: [Commit a feedback](https://github.com/tzjvon/Lscroll/issues/new)
