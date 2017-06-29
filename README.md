@@ -22,8 +22,15 @@ If you're having trouble installing packages, check out the helpful docs for ins
     <title>Lscroll</title>
 </head>
 <body>
-    <!-- A lot of content -->
-    <!-- A lot of content -->
+    <div class="Lscroll-container" style="height: 300px;width: 360px;">
+        <div class="Lscroll-slider-wrapper">
+            <!-- A lot of content -->
+            <!-- A lot of content -->
+        </div>
+        <div class="Lscroll-scrollbar">
+            <div class="Lscroll-thumb"></div>
+        </div>
+    </div>
 
     <script src='dist/Lscroll.min.js'></script>
     <script>
