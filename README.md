@@ -28,10 +28,10 @@ If you're having trouble installing packages, check out the helpful docs for ins
     <script src='dist/Lscroll.min.js'></script>
     <script>
         var LSCROLL = new Lscroll({
-            wrapper: '#chat_1',
-            slider: '#wrapper_1',
-            scrollbar: '#bar_1',
-            preWheelPixels: 20,
+            wrapper: '.Lscroll-container',
+            slider: '.Lscroll-slider-wrapper',
+            scrollbar: '.Lscroll-scrollbar',
+            preWheelPixels: 10,
             scrollbarHide: true
         });
     </script>
