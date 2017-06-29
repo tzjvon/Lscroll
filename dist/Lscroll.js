@@ -34,6 +34,11 @@
     function removeEvent(el, type, fn){
         el.removeEventListener(type, fn)
     }
+    // function setAttributes(el, _obj) {
+    //     for (var key in _obj) {
+    //         el[key] = _obj[key];
+    //     }
+    // }
 
     var TRANSFORM = null;
     (function() {
@@ -91,12 +96,12 @@
 
         this.wheelY = 0;
 
-        this.scrollbarHeight,
-        this.thumbHeight,
-        this.thumbMovableMaxDist,
-        this.sliderHeight,
-        this.sliderMovableMaxDist,
-        this.scale;
+        // this.scrollbarHeight,
+        // this.thumbHeight,
+        // this.thumbMovableMaxDist,
+        // this.sliderHeight,
+        // this.sliderMovableMaxDist,
+        // this.scale;
 
         this.timeout = null;
 
@@ -137,6 +142,9 @@
 
         this.sliderHeight = this.slider.offsetHeight <= 0 ? 1 : this.slider.offsetHeight;
 
+        this.scrollbarHeight = this.scrollbar.offsetHeight;
+
+
         this.scale = this.scrollbarHeight / this.sliderHeight;
 
         if (this.scale >= 1) {
@@ -145,9 +153,9 @@
             this.thumb.style.height = (this.wrapperHeight / this.sliderHeight) * this.scrollbarHeight + 'px';
         }
 
-        this.scrollbarHeight = this.scrollbar.offsetHeight;
         this.thumbHeight = this.thumb.offsetHeight;
         this.thumbMovableMaxDist = this.scrollbarHeight - this.thumbHeight;
+
 
 
         this._showScrollbar();

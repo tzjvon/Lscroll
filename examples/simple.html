@@ -2,14 +2,87 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Lscroll</title>
+	<title> ☀️ Lscroll</title>
+	<style>
+		.Lscroll-container {
+			position: relative;
+			overflow: hidden;
+		}
+		.Lscroll-slider-wrapper {
+
+		}
+		.Lscroll-scrollbar {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			width: 5px;
+			background: rgba(0,0,0,.1);
+			opacity: 0;
+			visibility: hidden;
+			transition: all .2s linear;
+		}
+		.Lscroll-scrollbar.active {
+			opacity: 1;
+			visibility: visible;
+		}
+		.Lscroll-thumb {
+			position: absolute;
+			left: 0;
+			width: 100%;
+			background: black;
+			cursor: pointer;
+		}
+	</style>
 </head>
 <body>
-	
+	<div class="Lscroll-container" style="height: 300px;width: 360px;">
+	    <div class="Lscroll-slider-wrapper">
+			<div style="
+				line-height: 2;
+				-webkit-user-select: none;
+				padding: 10px;
+				background: rgba(245,235,212,.2);
+			">
+Lscroll is a lightweight,high-performant,no library denpendencies scroll controller.
 
-	<script src='../dist/Lscroll.min.js'></script>
+Lscroll is a lightweight,high-performant,no library denpendencies scroll controller.
+
+Lscroll is a lightweight,high-performant,no library denpendencies scroll controller.
+
+Lscroll is a lightweight,high-performant,no library denpendencies scroll controller.
+
+Lscroll is a lightweight,high-performant,no library denpendencies scroll controller.
+
+Lscroll is a lightweight,high-performant,no library denpendencies scroll controller.
+
+Lscroll is a lightweight,high-performant,no library denpendencies scroll controller.
+
+Lscroll is a lightweight,high-performant,no library denpendencies scroll controller.
+
+Lscroll is a lightweight,high-performant,no library denpendencies scroll controller.
+
+Lscroll is a lightweight,high-performant,no library denpendencies scroll controller.
+
+Lscroll is a lightweight,high-performant,no library denpendencies scroll controller.
+
+......
+			</div>
+	    </div>
+	    <div class="Lscroll-scrollbar">
+	        <div class="Lscroll-thumb"></div>
+	    </div>
+	</div>
+
+	<script src='../dist/Lscroll.js'></script>
 	<script>
-		
+		var LSCROLL = new Lscroll({
+	        wrapper: '.Lscroll-container',
+	        slider: '.Lscroll-slider-wrapper',
+	        scrollbar: '.Lscroll-scrollbar',
+	        preWheelPixels: 10,
+	        scrollbarHide: true
+	    });
 	</script>
 </body>
 </html>
