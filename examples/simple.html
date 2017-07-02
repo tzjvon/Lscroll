@@ -36,8 +36,8 @@
 	</style>
 </head>
 <body>
-	<div class="Lscroll-container" style="height: 300px;width: 360px;">
-	    <div class="Lscroll-slider-wrapper">
+	<div id="Lscroll1" class="Lscroll-container" style="height: 300px;width: 360px;">
+	    <div id="wrap1" class="Lscroll-slider-wrapper">
 			<div style="
 				line-height: 2;
 				-webkit-user-select: none;
@@ -69,20 +69,80 @@ Lscroll is a lightweight,high-performant,no library denpendencies scroll control
 ......
 			</div>
 	    </div>
-	    <div class="Lscroll-scrollbar">
+	    <div id="bar1" class="Lscroll-scrollbar">
+	        <div class="Lscroll-thumb"></div>
+	    </div>
+	</div>
+	<div id="Lscroll2" class="Lscroll-container" style="height: 300px;width: 360px;">
+	    <div id="wrap2" class="Lscroll-slider-wrapper">
+			<div style="
+				line-height: 2;
+				-webkit-user-select: none;
+				padding: 10px;
+				background: rgba(245,235,212,.2);
+			">
+Lscroll is a lightweight,high-performant,no library denpendencies scroll controller.
+
+Lscroll is a lightweight,high-performant,no library denpendencies scroll controller.
+
+Lscroll is a lightweight,high-performant,no library denpendencies scroll controller.
+
+Lscroll is a lightweight,high-performant,no library denpendencies scroll controller.
+
+Lscroll is a lightweight,high-performant,no library denpendencies scroll controller.
+
+Lscroll is a lightweight,high-performant,no library denpendencies scroll controller.
+
+Lscroll is a lightweight,high-performant,no library denpendencies scroll controller.
+
+Lscroll is a lightweight,high-performant,no library denpendencies scroll controller.
+
+Lscroll is a lightweight,high-performant,no library denpendencies scroll controller.
+
+Lscroll is a lightweight,high-performant,no library denpendencies scroll controller.
+
+Lscroll is a lightweight,high-performant,no library denpendencies scroll controller.
+
+......
+			</div>
+	    </div>
+	    <div id="bar2" class="Lscroll-scrollbar">
 	        <div class="Lscroll-thumb"></div>
 	    </div>
 	</div>
 
 	<script src='../dist/Lscroll.js'></script>
+	<script src='../build/plugins/test.js'></script>
 	<script>
-		var LSCROLL = new Lscroll({
-	        wrapper: '.Lscroll-container',
-	        slider: '.Lscroll-slider-wrapper',
-	        scrollbar: '.Lscroll-scrollbar',
-	        preWheelPixels: 10,
-	        scrollbarHide: true
-	    });
+		window.onload = function () {
+
+//			LSCROLL = new Lscroll({
+//				wrapper: '.Lscroll-container',
+//				slider: '.Lscroll-slider-wrapper',
+//				scrollbar: '.Lscroll-scrollbar',
+//				preWheelPixels: 10,
+//				scrollbarHide: true
+//			});
+
+
+			LSCROLL = new Lscroll({
+				wrapper: '#Lscroll1',
+				slider: '#wrap1',
+				scrollbar: '#bar1',
+				preWheelPixels: 10,
+				scrollbarHide: true,
+				plugins: ['test']
+			});
+
+			LSCROLL2 = new Lscroll({
+				wrapper: '#Lscroll2',
+				slider: '#wrap2',
+//				scrollbar: '#bar2',
+				preWheelPixels: 10,
+				scrollbarHide: true
+			});
+		};
+
 	</script>
 </body>
 </html>
